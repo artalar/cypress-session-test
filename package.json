@@ -1,9 +1,11 @@
 {
   "scripts": {
+    "dev": "npx serve .",
     "cypress:open": "cypress open --browser firefox",
-    "test:e2e": "cypress run --headless --browser firefox"
+    "cypress:run": "cypress run --headless --browser firefox"
   },
   "dependencies": {
-    "cypress": "^10.1.0"
+    "cypress": "^10.1.0",
+    "serve": "^13.0.2"
   }
 }
