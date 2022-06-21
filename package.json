@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "cypress:open": "cypress open --browser firefox",
+    "test:e2e": "cypress run --headless --browser firefox"
+  },
+  "dependencies": {
+    "cypress": "^10.1.0"
+  }
+}

@@ -1,0 +1,20 @@
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+    visibility: public
+  - port: 5900
+    onOpen: ignore
+  - port: 6080
+    onOpen: ignore
+
+# List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: npm install
+    command: npm run dev
+  - command: |
+      gp await-port 3000
+      export CYPRESS_BASE_URL=$(gp url 3000)
+      npm run test:e2e
